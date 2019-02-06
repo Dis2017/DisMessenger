@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item
+            android:id="@+id/main_personal_data"
+            android:icon="@drawable/personal_data"
+            android:title="@string/personal_data" />
+        <item
+            android:id="@+id/main_setting"
+            android:icon="@drawable/setting"
+            android:title="@string/setting" />
+        <item
+            android:id="@+id/main_fast_file_transfer"
+            android:icon="@drawable/fast_file_transfer"
+            android:title="@string/fast_file_transfer" />
+        <item
+            android:id="@+id/main_scan"
+            android:icon="@drawable/scan"
+            android:title="@string/scan" />
+        <item
+            android:id="@+id/main_feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/feedback" />
+        <item
+            android:id="@+id/main_help"
+            android:icon="@drawable/help"
+            android:title="@string/help" />
+        <item
+            android:id="@+id/main_about"
+            android:icon="@drawable/about"
+            android:title="@string/about" />
+    </group>
+
+</menu>

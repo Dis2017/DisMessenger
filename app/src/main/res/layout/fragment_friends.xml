@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#10000000"
+    tools:context=".Fragments.MessageFragment">
+
+    <LinearLayout
+        android:id="@+id/friends_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/search_bar_bg">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search"
+            android:tint="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:textColor="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent"
+        android:background="@android:color/white">
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.1dp"-->
+            <!--android:background="@android:color/darker_gray"/>-->
+
+        <RelativeLayout
+            android:id="@+id/friends_new_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            tools:targetApi="lollipop"
+            tools:ignore="KeyboardInaccessibleWidget">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/new_friend"
+                android:textColor="@android:color/black"
+                android:textSize="17.5sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/friends_new_friend_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@id/imageView"
+                android:layout_toStartOf="@id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:tint="@android:color/darker_gray"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/friends_create_group_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            tools:ignore="KeyboardInaccessibleWidget">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/create_group_chat"
+                android:textColor="@android:color/black"
+                android:textSize="17.5sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right"
+                android:tint="@android:color/darker_gray"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.1dp"-->
+            <!--android:background="@android:color/darker_gray"/>-->
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/friends_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        app:tabMinWidth="0dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        app:tabIndicatorColor="@color/colorPrimaryDark"
+        app:tabTextColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabUnboundedRipple="true"
+        tools:ignore="RtlSymmetry">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friends" />
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/group_chat" />
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/friends_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
